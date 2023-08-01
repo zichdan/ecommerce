@@ -42,8 +42,8 @@ def signup(request):
 
         })
 
-        email_message = EmailMessage(email_subject,message,settings.EMAIL_HOST_USER,[email])
-        email_message.send()
+        # email_message = EmailMessage(email_subject,message,settings.EMAIL_HOST_USER,[email])
+        # email_message.send()
         messages.success(request,f"Activate Your Account by clicking the link in your gmail {message}")
         return redirect('/auth/login/')
     return render(request,"signup.html")
